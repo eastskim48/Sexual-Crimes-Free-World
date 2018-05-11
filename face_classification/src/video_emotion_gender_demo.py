@@ -74,7 +74,7 @@ while True:
         draw_bounding_box(face_coordinates, rgb_image, color)
         draw_text(face_coordinates, rgb_image, gender_mode,
                   color, 0, -20, 1, 1)
-    bgr_image = cv2.cvtColor(rgb_image, cv2.COLOR_GRAY2BGR)
+    bgr_image = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2BGR)
     cv2.imshow('window_frame', bgr_image)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

@@ -3,3 +3,4 @@ face_classification/images
 face_classification/src/.idea
 face_classification/src/models/__pycache__
 face_classification/src/utils/__pycache__
+face_classification/.idea
