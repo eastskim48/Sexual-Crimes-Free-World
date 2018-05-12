@@ -30,7 +30,7 @@ folder_names = []
 dataset_path = '../datasets/POSE/'
 origin_ext = ".tif"
 result_ext = ".png"
-for i in range(1, 1042):
+for i in range(1, 1043):
     name = str(i)
     while len(name) is not 6:
         name = "0" + name
