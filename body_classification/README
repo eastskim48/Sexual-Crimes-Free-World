@@ -1,0 +1,3 @@
+---dataset---
+1. download "Example Crops" file from "https://www.vision.rwth-aachen.de/page/parse27k"
+2. save and move hdf5 files to the body_classification folder
