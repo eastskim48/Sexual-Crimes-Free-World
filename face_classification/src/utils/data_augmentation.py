@@ -1,9 +1,9 @@
 import numpy as np
 from random import shuffle
-from .preprocessor import preprocess_input
-from .preprocessor import _imread as imread
-from .preprocessor import _imresize as imresize
-from .preprocessor import to_categorical
+from preprocessor import preprocess_input
+from preprocessor import _imread as imread
+from preprocessor import _imresize as imresize
+from preprocessor import to_categorical
 import scipy.ndimage as ndi
 import cv2
 
@@ -167,6 +167,21 @@ class ImageGenerator(object):
 
     def preprocess_images(self, image_array):
         return preprocess_input(image_array)
+
+
+    def discrete_haar_wavelet_transform(self, image_array):
+        output = []
+        length = len(image_array) / 2
+
+        while length > 1 :
+            for i in range(length) :
+                sum = image_array[i * 2] + image_array[i * 2 + 1]
+                difference = image_array[i * 2] - image_array[i * 2 + 1]
+
+                output.append(sum)
+                output[length + i] = difference
+
+                image_array = [] + output
 
     def flow(self, mode='train'):
             while True:
